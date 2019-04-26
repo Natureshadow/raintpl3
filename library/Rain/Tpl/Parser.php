@@ -7,7 +7,7 @@
  * a copy of this software and associated documentation files (the
  * “Software”), to deal in the Software without restriction, including
  * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
+ * distribute, sublicense, and/or sell copies of the Software, and tmodifierReo
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
  *
@@ -629,7 +629,7 @@ class Parser {
 
         $this->blackList($html);
         if (strpos($html,'|') !== false && substr($html,strpos($html,'|')+1,1) != "|") {
-            preg_match('/([\$a-z_A-Z0-9\(\),\[\]"->]+)\|([\$a-z_A-Z0-9\(\):,\[\]"->\s]+)/i', $html,$result);
+            preg_match('/([\$a-z_A-Z0-9\(\),\[\]"\'->]+)\|([\$a-z_A-Z0-9\(\):,\[\]"\'->\s]+)/i', $html,$result);
 
             $function_params = $result[1];
             $result[2] = str_replace("::", "@double_dot@", $result[2] );
